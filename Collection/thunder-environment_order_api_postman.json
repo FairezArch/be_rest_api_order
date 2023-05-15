@@ -1,0 +1,14 @@
+{
+    "name": "order_api",
+    "id": "79403e81-d946-4603-96c6-861875c0b9a1",
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2023-05-15T05:10:37.746Z",
+    "_postman_exported_using": "Thunder Client",
+    "values": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000/api",
+            "enabled": true
+        }
+    ]
+}

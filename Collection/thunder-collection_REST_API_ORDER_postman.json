@@ -1,0 +1,273 @@
+{
+    "info": {
+        "name": "REST_API_ORDER",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Export",
+            "item": [
+                {
+                    "name": "export",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/export",
+                            "path": [
+                                "export"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "item": [
+                {
+                    "name": "Lists",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/product",
+                            "path": [
+                                "product"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Detail",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/product/1",
+                            "path": [
+                                "product",
+                                "1"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{base_url}}/product",
+                            "path": [
+                                "product"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"bawang goreng\",\n  \"description\": \"bawang goreng gunung pandan\",\n  \"price\": 10000,\n  \"quantity\": 10\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "{{base_url}}/product/1",
+                            "path": [
+                                "product",
+                                "1"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"bawang goreng\",\n  \"description\": \"bawang goreng gunung pandan\",\n  \"price\": 10000,\n  \"quantity\": 10\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{base_url}}/product/1",
+                            "path": [
+                                "product",
+                                "1"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Order",
+            "item": [
+                {
+                    "name": "Lists",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/order",
+                            "path": [
+                                "order"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Add Cart",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{base_url}}/cart",
+                            "path": [
+                                "cart"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"user\": 1,\n  \"cart\": [\n    {\n      \"product_id\": 1,\n      \"quantity\": 10\n    },\n    {\n      \"product_id\": 2,\n      \"quantity\": 15\n    }\n  ]\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Checkout",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{base_url}}/checkout",
+                            "path": [
+                                "checkout"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"user\": 1,\n  \"cart\": [\n    {\n      \"product_id\": 1,\n      \"quantity\": 10\n    },\n    {\n      \"product_id\": 2,\n      \"quantity\": 15\n    }\n  ]\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Summary",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/summary",
+                            "path": [
+                                "summary"
+                            ],
+                            "host": [
+                                "{{base_url}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
