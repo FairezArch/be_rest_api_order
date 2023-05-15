@@ -39,6 +39,12 @@ $ php artisan migrate --seed
 $ php artisan storage:link
 ```
 
+- Run command artisan queue
+
+```
+$ php artisan queue:work
+```
+
 ## Collection
 Open the folder `Collection` in this project, And will see two files:
 - `thunder-collection_REST_API_ORDER_postman.json` for list API.
