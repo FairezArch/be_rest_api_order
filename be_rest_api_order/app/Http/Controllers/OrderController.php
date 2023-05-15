@@ -141,6 +141,11 @@ class OrderController extends Controller
             $updateTrans = Order::find($lastID_transaction);
             $updateTrans->update(['total_price' => $total_price]);
 
+            $cart = Cart::where('user_id', $request->user)->whereIn('product_id', $arr);
+            if(!$cart->get()->isEmpty()){
+                $cart->delete();
+            }
+
             DB::commit();
             Log::info('Checkout: ', ['checkout' => $arr]);
             return response()->json([
